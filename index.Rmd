@@ -1,0 +1,69 @@
+---
+title: "Relationship between Evolutionary Divergence and Historical Connectivity in the Northern Andean Páramos During the Pleistocene"
+author: "Sebastián Sánchez Cuartas"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+      position: "left"
+    theme: flatly
+    highlight: tango
+---
+
+# **Introduction**
+
+The Andean páramos, recognized for their unique biodiversity and specific adaptations to high mountain conditions, have been shaped by geological and climatic events, particularly during the Pleistocene. This period was characterized by recurrent climate fluctuations associated with Earth's orbit around the sun, which led to the expansion and contraction of páramo environments, generating a complex connectivity history (Figure 1, 2). To investigate how these climatic fluctuations may have influenced the diversification of páramo-associated organisms, we employed an algorithm specifically developed to calculate historical connectivity based on a paleoclimatic model describing the altitudinal extent of the páramo and its duration during the Pleistocene. We used these connectivity estimates as predictors of genetic divergence in a Generalized Dissimilarity Model (GDM) to establish a link between diversification resulting from continuous fragmentation during glacial cycles.
+
+```{r echo=FALSE, fig.align='center', fig.cap="**Figure 1.** *Shown below are the hypothetical dynamics of the páramos during the Pleistocene, resulting from climatic fluctuations. The GIF illustrate how the forest line rises or falls in response to temperature variations. This GIF was created from a video by Catalino Giraldo based on the work of Flantua et al. (2019), which is available at [this link](https://youtu.be/-Wcp18vBDK4)*", out.width='75%'}
+knitr::include_graphics("flickering.gif")
+```
+
+...
+
+```{r echo=FALSE, fig.align='center', fig.cap="**Figure 2**. *Below are shown the possible movement dynamics of species (represented by points) during periods of higher or lower connectivity. This GIF was created from a video by Catalino Giraldo based on the work of Flantua et al. (2019) and is available at [this link](https://youtu.be/-Wcp18vBDK4)*", out.width='75%'}
+knitr::include_graphics("dinmov.gif")
+```
+
+...
+
+To carry out the complete process of relating historical connectivity with evolutionary distances of páramo organisms, the following provides a detailed flowchart of the process (Figure 1), along with direct links to each step and its corresponding GitHub repository. This material facilitates the reconstruction of the procedure and is applicable to both the raw evolutionary distance data of the Espeletine subtribe used in the original study and other groups with ecosystems in the northern Andean páramos, whose phylogeny is an ultrametric tree with divergence times not exceeding 2.2 million years between groups. This is because the paleoclimatic model by Flantua et al. (2019) covers up to that age.
+
+The following steps are mandatory, and detailed information for each step can be found in the provided links:
+
+1.  **Reclassifying a Digital Elevation Model in R for Connectivity Modeling** - [See the Code and Instructions](https://innerhaze.github.io/DEM-Reclassification-R-Paramo-Connectivity-Modeling/) and [Repository](https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling/tree/main).
+
+**Description**: Reclassifying a digital elevation model in R for connectivity modeling based on paleoclimatic data
+
+2.  **Convert Rasters to INT8 Format and Reproject to EPSG: 32618** - [See the Code and Instructions](https://innerhaze.github.io/Convert-Rasters-to-INT8-Format-and-or-Reproject-to-EPSG-32618/) and [Repository](https://github.com/innerhaze/Convert-Rasters-to-INT8-Format-and-or-Reproject-to-EPSG-32618).
+
+**Description**: This R script takes all raster files in .tiff format from a folder, converts them to INT8 format, reprojects them to the EPSG: 32618 coordinate system, and then saves them in the output folder in the same format.
+
+3.  **Custom Pixel Reclassification in Raster Data Using Specified Coordinates** - [See the Code and Instructions](https://innerhaze.github.io/Custom-Pixel-Reclassification-in-Raster-Data-Using-Specified-Coordinates/) and [Repository](https://github.com/innerhaze/Custom-Pixel-Reclassification-in-Raster-Data-Using-Specified-Coordinates).
+
+**Description**: This R script reclassifies pixels in raster datasets based on coordinates from a CSV file. It assigns values to identified pixels and allows customization of these values for different analyses. Useful for applications like connectivity modeling.
+
+4.  **Assignment of Unique Identifiers to Patches in Connectivity Modeling Using Graphab** - [See the Code and Instructions](https://innerhaze.github.io/Assignment-of-Unique-Identifiers-to-Patches-in-Connectivity-Modeling-Using-Graphab/) and [Repository](https://github.com/innerhaze/Assignment-of-Unique-Identifiers-to-Patches-in-Connectivity-Modeling-Using-Graphab).
+
+**Description**: This R code assigns unique numerical IDs to patches in Graphab to preserve species identity. It uses a CSV file with species names and coordinates to maintain traceability and facilitate the recovery of original identities in connectivity analysis.
+
+5.  **Java-R Integration with Graphab: Cost Surface Processing and Data Management** - [See the Code and Instructions](https://innerhaze.github.io/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management/) and [Repository](https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management).
+
+**Description**: Integrates Java within R using Graphab for automated processing of cost surfaces. Utilizes rJava to execute Graphab .jar files and manage connectivity modeling. Includes a for loop for handling multiple cost surfaces and renaming IDs from patches based on species data.
+
+6.  **R Algorithm for Analyzing Historical Connectivity of Páramo Lineages During the Pleistocene** - [See the Code and Instructions](https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/) and [Repository](https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene).
+
+Description: The algorithm calculates historical connectivity between lineage pairs by analyzing evolutionary distances and climatic fluctuations during the Pleistocene. Using the pollen database from Flantua et al. (2019) with various páramo configurations, it computes a weighted average of historical connectivity. This helps assess how paleoclimatic conditions influenced lineage divergence.
+
+7.  **Alignment of Two Distance Matrices for Comparative Analysis** - [See the Code and Instructions](https://innerhaze.github.io/Alignment-of-Two-Distance-Matrices-for-Comparative-Analysis/) and [Repository](https://github.com/innerhaze/Alignment-of-Two-Distance-Matrices-for-Comparative-Analysis).
+
+Description: This R code aligns two distance matrices with identical row and column names but different data. It reorders one matrix to match the other, allowing for cohesive relational analysis. This alignment ensures both matrices are mirrored for accurate comparative analysis.
+
+8.  **GDM**
+
+## **References**
+
+Flantua, S. G. A., O'Dea, A., Onstein, R. E., Hooghiemstra, H., & Hoorn, C. (2019). The flickering connectivity system of the north Andean páramos. *Journal of Biogeography, 46*(8), 1808-1825.
