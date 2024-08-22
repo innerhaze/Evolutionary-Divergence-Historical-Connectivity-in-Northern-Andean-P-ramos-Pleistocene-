@@ -330,7 +330,7 @@ div.tocify {
 Divergence and Historical Connectivity in the Northern Andean Páramos
 During the Pleistocene</h1>
 <h4 class="author">Sebastián Sánchez Cuartas</h4>
-<h4 class="date">agosto 21, 2024</h4>
+<h4 class="date">agosto 22, 2024</h4>
 
 </div>
 
@@ -352,6 +352,7 @@ during the Pleistocene. We used these connectivity estimates as
 predictors of genetic divergence in a Generalized Dissimilarity Model
 (GDM) to establish a link between diversification resulting from
 continuous fragmentation during glacial cycles.</p>
+<p>…</p>
 <div class="figure" style="text-align: center">
 <img src="flickering.gif" alt="**Figure 1.** *Shown below are the hypothetical dynamics of the páramos during the Pleistocene, resulting from climatic fluctuations. The GIF illustrate how the forest line rises or falls in response to temperature variations. This GIF was created from a video by Catalino Giraldo based on the work of Flantua et al. (2019), which is available at [this link](https://youtu.be/-Wcp18vBDK4)*" width="75%" />
 <p class="caption">
@@ -386,92 +387,158 @@ Andean páramos, whose phylogeny is an ultrametric tree with divergence
 times not exceeding 2.2 million years between groups. This is because
 the paleoclimatic model by Flantua et al. (2019) covers up to that
 age.</p>
-<p>The following steps are mandatory, and detailed information for each
-step can be found in the provided links:</p>
+<p>…</p>
+<div
+id="the-following-steps-are-mandatory-and-detailed-information-for-each-step-can-be-found-in-the-provided-links"
+class="section level4">
+<h4>The following steps are mandatory, and detailed information for each
+step can be found in the provided links:</h4>
 <ol style="list-style-type: decimal">
-<li><strong>Reclassifying a Digital Elevation Model in R for
-Connectivity Modeling</strong> - <a
+<li><div>
+<blockquote>
+<p><strong>Reclassifying a Digital Elevation Model in R for Connectivity
+Modeling</strong> - <a
 href="https://innerhaze.github.io/DEM-Reclassification-R-Paramo-Connectivity-Modeling/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling/tree/main">Repository</a>.</li>
+href="https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling/tree/main">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p><strong>Description</strong>: Reclassifying a digital elevation model
-in R for connectivity modeling based on paleoclimatic data</p>
+<p><strong><em>Description</em></strong>: Reclassifying a digital
+elevation model in R for connectivity modeling based on paleoclimatic
+data</p>
 <ol start="2" style="list-style-type: decimal">
-<li><strong>Convert Rasters to INT8 Format and Reproject to EPSG:
+<li><div>
+<blockquote>
+<p><strong>Convert Rasters to INT8 Format and Reproject to EPSG:
 32618</strong> - <a
 href="https://innerhaze.github.io/Convert-Rasters-to-INT8-Format-and-or-Reproject-to-EPSG-32618/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/Convert-Rasters-to-INT8-Format-and-or-Reproject-to-EPSG-32618">Repository</a>.</li>
+href="https://github.com/innerhaze/Convert-Rasters-to-INT8-Format-and-or-Reproject-to-EPSG-32618">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p><strong>Description</strong>: This R script takes all raster files in
-.tiff format from a folder, converts them to INT8 format, reprojects
-them to the EPSG: 32618 coordinate system, and then saves them in the
-output folder in the same format.</p>
+<p><strong><em>Description</em></strong>: This R script takes all raster
+files in .tiff format from a folder, converts them to INT8 format,
+reprojects them to the EPSG: 32618 coordinate system, and then saves
+them in the output folder in the same format.</p>
 <ol start="3" style="list-style-type: decimal">
-<li><strong>Custom Pixel Reclassification in Raster Data Using Specified
+<li><div>
+<blockquote>
+<p><strong>Custom Pixel Reclassification in Raster Data Using Specified
 Coordinates</strong> - <a
 href="https://innerhaze.github.io/Custom-Pixel-Reclassification-in-Raster-Data-Using-Specified-Coordinates/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/Custom-Pixel-Reclassification-in-Raster-Data-Using-Specified-Coordinates">Repository</a>.</li>
+href="https://github.com/innerhaze/Custom-Pixel-Reclassification-in-Raster-Data-Using-Specified-Coordinates">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p><strong>Description</strong>: This R script reclassifies pixels in
-raster datasets based on coordinates from a CSV file. It assigns values
-to identified pixels and allows customization of these values for
-different analyses. Useful for applications like connectivity
+<p><strong><em>Description</em></strong>: This R script reclassifies
+pixels in raster datasets based on coordinates from a CSV file. It
+assigns values to identified pixels and allows customization of these
+values for different analyses. Useful for applications like connectivity
 modeling.</p>
 <ol start="4" style="list-style-type: decimal">
-<li><strong>Assignment of Unique Identifiers to Patches in Connectivity
+<li><div>
+<blockquote>
+<p><strong>Assignment of Unique Identifiers to Patches in Connectivity
 Modeling Using Graphab</strong> - <a
 href="https://innerhaze.github.io/Assignment-of-Unique-Identifiers-to-Patches-in-Connectivity-Modeling-Using-Graphab/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/Assignment-of-Unique-Identifiers-to-Patches-in-Connectivity-Modeling-Using-Graphab">Repository</a>.</li>
+href="https://github.com/innerhaze/Assignment-of-Unique-Identifiers-to-Patches-in-Connectivity-Modeling-Using-Graphab">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p><strong>Description</strong>: This R code assigns unique numerical
-IDs to patches in Graphab to preserve species identity. It uses a CSV
-file with species names and coordinates to maintain traceability and
-facilitate the recovery of original identities in connectivity
-analysis.</p>
+<p><strong><em>Description</em></strong>: This R code assigns unique
+numerical IDs to patches in Graphab to preserve species identity. It
+uses a CSV file with species names and coordinates to maintain
+traceability and facilitate the recovery of original identities in
+connectivity analysis.</p>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Java-R Integration with Graphab: Cost Surface Processing and
+<li><div>
+<blockquote>
+<p><strong>Java-R Integration with Graphab: Cost Surface Processing and
 Data Management</strong> - <a
 href="https://innerhaze.github.io/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management">Repository</a>.</li>
+href="https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p><strong>Description</strong>: Integrates Java within R using Graphab
-for automated processing of cost surfaces. Utilizes rJava to execute
-Graphab .jar files and manage connectivity modeling. Includes a for loop
-for handling multiple cost surfaces and renaming IDs from patches based
-on species data.</p>
+<p><strong><em>Description</em></strong>: Integrates Java within R using
+Graphab for automated processing of cost surfaces. Utilizes rJava to
+execute Graphab .jar files and manage connectivity modeling. Includes a
+for loop for handling multiple cost surfaces and renaming IDs from
+patches based on species data.</p>
 <ol start="6" style="list-style-type: decimal">
-<li><strong>R Algorithm for Analyzing Historical Connectivity of Páramo
+<li><div>
+<blockquote>
+<p><strong>R Algorithm for Analyzing Historical Connectivity of Páramo
 Lineages During the Pleistocene</strong> - <a
 href="https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene">Repository</a>.</li>
+href="https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p>Description: The algorithm calculates historical connectivity between
-lineage pairs by analyzing evolutionary distances and climatic
-fluctuations during the Pleistocene. Using the pollen database from
-Flantua et al. (2019) with various páramo configurations, it computes a
-weighted average of historical connectivity. This helps assess how
-paleoclimatic conditions influenced lineage divergence.</p>
+<p><strong><em>Description</em></strong>: The algorithm calculates
+historical connectivity between lineage pairs by analyzing evolutionary
+distances and climatic fluctuations during the Pleistocene. Using the
+pollen database from Flantua et al. (2019) with various páramo
+configurations, it computes a weighted average of historical
+connectivity. This helps assess how paleoclimatic conditions influenced
+lineage divergence.</p>
 <ol start="7" style="list-style-type: decimal">
-<li><strong>Alignment of Two Distance Matrices for Comparative
+<li><div>
+<blockquote>
+<p><strong>Alignment of Two Distance Matrices for Comparative
 Analysis</strong> - <a
 href="https://innerhaze.github.io/Alignment-of-Two-Distance-Matrices-for-Comparative-Analysis/">See
 the Code and Instructions</a> and <a
-href="https://github.com/innerhaze/Alignment-of-Two-Distance-Matrices-for-Comparative-Analysis">Repository</a>.</li>
+href="https://github.com/innerhaze/Alignment-of-Two-Distance-Matrices-for-Comparative-Analysis">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
-<p>Description: This R code aligns two distance matrices with identical
-row and column names but different data. It reorders one matrix to match
-the other, allowing for cohesive relational analysis. This alignment
-ensures both matrices are mirrored for accurate comparative
-analysis.</p>
+<p><strong><em>Description</em></strong>: This R code aligns two
+distance matrices with identical row and column names but different
+data. It reorders one matrix to match the other, allowing for cohesive
+relational analysis. This alignment ensures both matrices are mirrored
+for accurate comparative analysis.</p>
 <ol start="8" style="list-style-type: decimal">
-<li><strong>GDM</strong></li>
+<li><div>
+<blockquote>
+<p><strong>Converting a Relationship List to Distance Matrices</strong>
+- <a
+href="https://innerhaze.github.io/Converting-a-Relationship-List-to-Distance-Matrices/">See
+the Code and Instructions</a> and <a
+href="https://github.com/innerhaze/Converting-a-Relationship-List-to-Distance-Matrices">Repository</a>.</p>
+</blockquote>
+</div></li>
 </ol>
+<p><strong><em>Description</em></strong>: The following code takes a CSV
+file containing a relationship list (also known as an incidence table)
+and converts it into three separate distance matrices. Each matrix
+corresponds to one of the three columns representing different indices:
+Dist, DistM, and CF. The code then saves each of the matrices
+independently.</p>
+<ol start="9" style="list-style-type: decimal">
+<li><div>
+<blockquote>
+<p><strong>Generalized Dissimilarity Modeling (GDM) for Evolutionary
+Divergence and Historical Connectivity Analysis</strong> - <a
+href="https://innerhaze.github.io/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis/">See
+the Code and Instructions</a> and <a
+href="https://github.com/innerhaze/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis">Repository</a>.</p>
+</blockquote>
+</div></li>
+</ol>
+<p><strong><em>Description</em></strong>: This repository contains R
+scripts for analyzing the relationship between evolutionary divergence
+and historical connectivity in Andean páramos. Using GDM, NMDS, and
+evolutionary distance data, the project explores how Pleistocene
+climatic fluctuations influenced diversification in páramo species.</p>
+<p>…</p>
+</div>
 <div id="references" class="section level2">
 <h2><strong>References</strong></h2>
 <p>Flantua, S. G. A., O’Dea, A., Onstein, R. E., Hooghiemstra, H., &amp;
