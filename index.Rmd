@@ -1,7 +1,7 @@
 ---
 title: "Relationship between Evolutionary Divergence and Historical Connectivity in the Northern Andean Páramos During the Pleistocene"
 author: "Sebastián Sánchez Cuartas"
-date: "`r format(Sys.Date(), '%B %d, %Y')`"
+date: ""
 output: 
   html_document:
     toc: true
@@ -14,29 +14,49 @@ output:
     highlight: tango
 ---
 
+```{=html}
+<style>
+/* Mantiene la misma fuente para los blockquotes */
+blockquote {
+    font-family: inherit; /* Usa la misma fuente que el resto del texto */
+    font-size: inherit; /* Usa el mismo tamaño de fuente que el resto del texto */
+}
+
+/* Ajusta el ancho del menú de la tabla de contenido flotante */
+.tocify {
+    width: 300px; /* Ajusta este valor según sea necesario */
+}
+.tocify-wrapper {
+    width: 300px; /* Ajusta este valor según sea necesario */
+}
+</style>
+```
+
+------------------------------------------------------------------------
+
 # **Introduction**
 
 The Andean páramos, recognized for their unique biodiversity and specific adaptations to high mountain conditions, have been shaped by geological and climatic events, particularly during the Pleistocene. This period was characterized by recurrent climate fluctuations associated with Earth's orbit around the sun, which led to the expansion and contraction of páramo environments, generating a complex connectivity history (Figure 1, 2). To investigate how these climatic fluctuations may have influenced the diversification of páramo-associated organisms, we employed an algorithm specifically developed to calculate historical connectivity based on a paleoclimatic model describing the altitudinal extent of the páramo and its duration during the Pleistocene. We used these connectivity estimates as predictors of genetic divergence in a Generalized Dissimilarity Model (GDM) to establish a link between diversification resulting from continuous fragmentation during glacial cycles.
 
-...
+------------------------------------------------------------------------
 
 ```{r echo=FALSE, fig.align='center', fig.cap="**Figure 1.** *Shown below are the hypothetical dynamics of the páramos during the Pleistocene, resulting from climatic fluctuations. The GIF illustrate how the forest line rises or falls in response to temperature variations. This GIF was created from a video by Catalino Giraldo based on the work of Flantua et al. (2019), which is available at [this link](https://youtu.be/-Wcp18vBDK4)*", out.width='75%'}
 knitr::include_graphics("flickering.gif")
 ```
 
-...
+------------------------------------------------------------------------
 
 ```{r echo=FALSE, fig.align='center', fig.cap="**Figure 2**. *Below are shown the possible movement dynamics of species (represented by points) during periods of higher or lower connectivity. This GIF was created from a video by Catalino Giraldo based on the work of Flantua et al. (2019) and is available at [this link](https://youtu.be/-Wcp18vBDK4)*", out.width='75%'}
 knitr::include_graphics("dinmov.gif")
 ```
 
-...
+------------------------------------------------------------------------
 
-To carry out the complete process of relating historical connectivity with evolutionary distances of páramo organisms, the following provides a detailed flowchart of the process (Figure 1), along with direct links to each step and its corresponding GitHub repository. This material facilitates the reconstruction of the procedure and is applicable to both the raw evolutionary distance data of the Espeletine subtribe used in the original study and other groups with ecosystems in the northern Andean páramos, whose phylogeny is an ultrametric tree with divergence times not exceeding 2.2 million years between groups. This is because the paleoclimatic model by Flantua et al. (2019) covers up to that age.
+To carry out the complete process of relating historical connectivity with evolutionary distances of páramo organisms, the following provides a detailed process is outlined below, including direct links to each step and its corresponding GitHub repository. This material facilitates the reconstruction of the procedure and is applicable to both the raw evolutionary distance data of the Espeletine subtribe used in the original study and other groups with ecosystems in the northern Andean páramos, whose phylogeny is an ultrametric tree with divergence times not exceeding 2.2 million years between groups. This is because the paleoclimatic model by Flantua et al. (2019) covers up to that age.
 
-...
+------------------------------------------------------------------------
 
-#### The following steps are mandatory, and detailed information for each step can be found in the provided links:
+**The following steps are mandatory, and detailed information for each step can be found in the provided links:**
 
 1.  <div>
 
@@ -110,8 +130,8 @@ To carry out the complete process of relating historical connectivity with evolu
 
 ***Description***: This repository contains R scripts for analyzing the relationship between evolutionary divergence and historical connectivity in Andean páramos. Using GDM, NMDS, and evolutionary distance data, the project explores how Pleistocene climatic fluctuations influenced diversification in páramo species.
 
-...
+------------------------------------------------------------------------
 
-## **References**
+# **References**
 
 Flantua, S. G. A., O'Dea, A., Onstein, R. E., Hooghiemstra, H., & Hoorn, C. (2019). The flickering connectivity system of the north Andean páramos. *Journal of Biogeography, 46*(8), 1808-1825.
